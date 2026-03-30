@@ -25,6 +25,7 @@ import {
   ChevronDown,
   Instagram,
   HelpCircle,
+  Menu,
 } from 'lucide-react';
 
 // --- Types ---
@@ -482,12 +483,12 @@ const RotatingSlogan = () => {
   const variant = sloganVariants[idx % sloganVariants.length];
 
   return (
-    <div className="inline-flex items-center gap-4 mb-8 h-6 overflow-visible">
+    <div className="flex items-center gap-3 mb-6 overflow-hidden max-w-full">
       <AnimatePresence mode="wait">
         <motion.div
           key={`line-${idx}`}
           initial={{ width: 0, opacity: 0 }}
-          animate={{ width: 48, opacity: 1 }}
+          animate={{ width: 32, opacity: 1 }}
           exit={{ width: 0, opacity: 0 }}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
           style={{ backgroundColor: slogan.lineColor, height: '1px', flexShrink: 0 }}
@@ -500,7 +501,7 @@ const RotatingSlogan = () => {
           animate={variant.animate}
           exit={variant.exit}
           transition={{ duration: 0.4, ease: 'easeInOut' }}
-          className="text-[10px] font-bold uppercase tracking-[0.4em] whitespace-nowrap"
+          className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.3em] sm:tracking-[0.4em] truncate"
           style={{ color: slogan.color }}
         >
           {slogan.text}
@@ -565,6 +566,7 @@ const Header = ({
 }) => {
   const t = useT(currentLang);
   const [isLangOpen, setIsLangOpen] = useState(false);
+  const [mobileOpen, setMobileOpen] = useState(false);
 
   const languages: { code: Language; label: string; flag: string }[] = [
     { code: 'de', label: 'Deutsch', flag: '🇩🇪' },
@@ -577,92 +579,155 @@ const Header = ({
   const activeLang = languages.find((l) => l.code === currentLang);
 
   return (
-    <header className="sticky top-0 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/80 z-40">
-      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-3">
-        <div className="flex items-center gap-2.5">
-          <div className="w-10 h-10 bg-[#1a1a1a] rounded-2xl flex items-center justify-center shadow-md">
-            <HardHat className="text-white w-5 h-5" />
-          </div>
-          <span className="text-lg font-bold tracking-tight text-[#1a1a1a]">Bauwerk_Saar</span>
-        </div>
-
-        <div className="hidden md:flex items-center gap-4">
-          {/* Write-to-us + messenger icons */}
-          <div className="flex items-center gap-3 border-r border-gray-100 pr-4">
-            <div className="flex flex-col items-center gap-1 mr-1">
-              <motion.span
-                animate={{ x: [0, 5, 0] }}
-                transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
-                className="text-gray-400"
-              >
-                <ArrowRight size={13} />
-              </motion.span>
-              <span className="text-[8px] font-bold uppercase tracking-widest text-gray-400 whitespace-nowrap leading-none">
-                {t('write_us')}
-              </span>
+    <>
+      <header className="sticky top-0 w-full bg-white/90 backdrop-blur-xl border-b border-gray-100/80 z-40">
+        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-3">
+          {/* Logo */}
+          <div className="flex items-center gap-2.5">
+            <div className="w-9 h-9 bg-[#1a1a1a] rounded-xl flex items-center justify-center shadow-md">
+              <HardHat className="text-white w-4 h-4" />
             </div>
-            <a
-              href="https://wa.me/49123456789"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-green-50 flex items-center justify-center text-gray-400 hover:text-[#25D366] transition-all"
-            >
-              <MessageCircle size={18} />
-            </a>
-            <a
-              href="https://t.me/saarbauteam"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-blue-50 flex items-center justify-center text-gray-400 hover:text-[#0088cc] transition-all"
-            >
-              <Send size={18} />
-            </a>
+            <span className="text-base font-bold tracking-tight text-[#1a1a1a]">Bauwerk_Saar</span>
           </div>
 
-          {/* Language switcher */}
-          <div className="relative">
-            <button
-              onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-gray-50 text-sm font-semibold text-[#1a1a1a] transition-all"
-            >
-              <Globe size={15} />
-              <span className="text-base">{activeLang?.flag}</span>
-              <ChevronDown size={13} className={`transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
-            </button>
-
-            <AnimatePresence>
-              {isLangOpen && (
-                <motion.div
-                  initial={{ opacity: 0, y: 6, scale: 0.97 }}
-                  animate={{ opacity: 1, y: 0, scale: 1 }}
-                  exit={{ opacity: 0, y: 6, scale: 0.97 }}
-                  transition={{ duration: 0.15 }}
-                  className="absolute top-full right-0 mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl py-2 min-w-[170px] overflow-hidden"
+          {/* Desktop nav */}
+          <div className="hidden md:flex items-center gap-4">
+            <div className="flex items-center gap-3 border-r border-gray-100 pr-4">
+              <div className="flex flex-col items-center gap-1 mr-1">
+                <motion.span
+                  animate={{ x: [0, 5, 0] }}
+                  transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
+                  className="text-gray-400"
                 >
-                  {languages.map((lang) => (
-                    <button
-                      key={lang.code}
-                      onClick={() => { onLangChange(lang.code); setIsLangOpen(false); }}
-                      className={`w-full px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50 flex items-center justify-between transition-all ${currentLang === lang.code ? 'text-[#1a1a1a] font-bold' : 'text-gray-500'}`}
-                    >
-                      <span>{lang.label}</span>
-                      <span className="text-base">{lang.flag}</span>
-                    </button>
-                  ))}
-                </motion.div>
-              )}
-            </AnimatePresence>
+                  <ArrowRight size={13} />
+                </motion.span>
+                <span className="text-[8px] font-bold uppercase tracking-widest text-gray-400 whitespace-nowrap leading-none">
+                  {t('write_us')}
+                </span>
+              </div>
+              <a href="https://wa.me/49123456789" target="_blank" rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-green-50 flex items-center justify-center text-gray-400 hover:text-[#25D366] transition-all">
+                <MessageCircle size={18} />
+              </a>
+              <a href="https://t.me/saarbauteam" target="_blank" rel="noopener noreferrer"
+                className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-blue-50 flex items-center justify-center text-gray-400 hover:text-[#0088cc] transition-all">
+                <Send size={18} />
+              </a>
+            </div>
+
+            <div className="relative">
+              <button
+                onClick={() => setIsLangOpen(!isLangOpen)}
+                className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-gray-50 text-sm font-semibold text-[#1a1a1a] transition-all"
+              >
+                <Globe size={15} />
+                <span className="text-base">{activeLang?.flag}</span>
+                <ChevronDown size={13} className={`transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
+              </button>
+              <AnimatePresence>
+                {isLangOpen && (
+                  <motion.div
+                    initial={{ opacity: 0, y: 6, scale: 0.97 }}
+                    animate={{ opacity: 1, y: 0, scale: 1 }}
+                    exit={{ opacity: 0, y: 6, scale: 0.97 }}
+                    transition={{ duration: 0.15 }}
+                    className="absolute top-full right-0 mt-2 bg-white/95 backdrop-blur-xl border border-gray-100 shadow-2xl rounded-2xl py-2 min-w-[170px] overflow-hidden z-50"
+                  >
+                    {languages.map((lang) => (
+                      <button key={lang.code}
+                        onClick={() => { onLangChange(lang.code); setIsLangOpen(false); }}
+                        className={`w-full px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50 flex items-center justify-between transition-all ${currentLang === lang.code ? 'text-[#1a1a1a] font-bold' : 'text-gray-500'}`}>
+                        <span>{lang.label}</span>
+                        <span className="text-base">{lang.flag}</span>
+                      </button>
+                    ))}
+                  </motion.div>
+                )}
+              </AnimatePresence>
+            </div>
+
+            <button onClick={onStartQuiz}
+              className="px-5 py-2.5 bg-[#1a1a1a] text-white font-semibold rounded-xl hover:bg-black transition-all shadow-md text-sm">
+              {t('nav_contact')}
+            </button>
           </div>
 
-          <button
-            onClick={onStartQuiz}
-            className="px-5 py-2.5 bg-[#1a1a1a] text-white font-semibold rounded-xl hover:bg-black transition-all shadow-md text-sm"
-          >
-            {t('nav_contact')}
-          </button>
+          {/* Mobile: lang flag + hamburger */}
+          <div className="flex md:hidden items-center gap-2">
+            <button
+              onClick={() => { setIsLangOpen(!isLangOpen); }}
+              className="flex items-center gap-1 px-2.5 py-2 rounded-xl hover:bg-gray-50 transition-all"
+            >
+              <span className="text-lg">{activeLang?.flag}</span>
+              <ChevronDown size={12} className={`text-gray-500 transition-transform ${isLangOpen ? 'rotate-180' : ''}`} />
+            </button>
+            <button
+              onClick={() => setMobileOpen(!mobileOpen)}
+              className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-gray-100 flex items-center justify-center transition-all"
+            >
+              {mobileOpen ? <X size={18} className="text-gray-700" /> : <Menu size={18} className="text-gray-700" />}
+            </button>
+          </div>
         </div>
-      </div>
-    </header>
+
+        {/* Mobile lang dropdown */}
+        <AnimatePresence>
+          {isLangOpen && (
+            <motion.div
+              initial={{ opacity: 0, y: -8 }}
+              animate={{ opacity: 1, y: 0 }}
+              exit={{ opacity: 0, y: -8 }}
+              transition={{ duration: 0.15 }}
+              className="md:hidden absolute right-4 top-14 bg-white border border-gray-100 shadow-2xl rounded-2xl py-2 min-w-[160px] z-50"
+            >
+              {languages.map((lang) => (
+                <button key={lang.code}
+                  onClick={() => { onLangChange(lang.code); setIsLangOpen(false); }}
+                  className={`w-full px-4 py-2.5 text-left text-sm font-medium hover:bg-gray-50 flex items-center justify-between transition-all ${currentLang === lang.code ? 'text-[#1a1a1a] font-bold' : 'text-gray-500'}`}>
+                  <span>{lang.label}</span>
+                  <span className="text-base">{lang.flag}</span>
+                </button>
+              ))}
+            </motion.div>
+          )}
+        </AnimatePresence>
+      </header>
+
+      {/* Mobile slide-down menu */}
+      <AnimatePresence>
+        {mobileOpen && (
+          <motion.div
+            initial={{ opacity: 0, height: 0 }}
+            animate={{ opacity: 1, height: 'auto' }}
+            exit={{ opacity: 0, height: 0 }}
+            transition={{ duration: 0.25, ease: 'easeInOut' }}
+            className="md:hidden fixed top-[57px] left-0 right-0 bg-white/95 backdrop-blur-xl border-b border-gray-100 z-30 overflow-hidden shadow-xl"
+          >
+            <div className="px-4 py-6 space-y-4">
+              {/* Messengers */}
+              <div className="flex items-center gap-3 pb-4 border-b border-gray-100">
+                <span className="text-xs font-bold uppercase tracking-widest text-gray-400 mr-1">{t('write_us')}:</span>
+                <a href="https://wa.me/49123456789" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-green-50 text-green-700 font-semibold rounded-xl text-sm transition-all">
+                  <MessageCircle size={16} /> WhatsApp
+                </a>
+                <a href="https://t.me/saarbauteam" target="_blank" rel="noopener noreferrer"
+                  className="flex items-center gap-2 px-4 py-2.5 bg-blue-50 text-blue-700 font-semibold rounded-xl text-sm transition-all">
+                  <Send size={16} /> Telegram
+                </a>
+              </div>
+              {/* CTA */}
+              <button
+                onClick={() => { onStartQuiz(); setMobileOpen(false); }}
+                className="w-full py-4 bg-[#1a1a1a] text-white font-bold rounded-2xl text-sm flex items-center justify-center gap-2 shadow-lg"
+              >
+                {t('nav_contact')} <ArrowRight size={16} />
+              </button>
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
+    </>
   );
 };
 
@@ -670,25 +735,27 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
   const t = useT(lang);
 
   return (
-    <section className="relative min-h-[95vh] flex items-center pt-10 pb-20 overflow-hidden bg-[#fcfcfc]">
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-bold text-gray-100/50 select-none pointer-events-none uppercase tracking-tighter leading-none z-0">
+    <section className="relative min-h-[100svh] flex items-center pt-8 pb-16 overflow-hidden bg-[#fcfcfc]">
+      {/* Background watermark — hidden on very small screens */}
+      <div className="hidden sm:block absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[25vw] font-bold text-gray-100/50 select-none pointer-events-none uppercase tracking-tighter leading-none z-0">
         Saarland
       </div>
 
-      <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-0 items-center relative z-10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid lg:grid-cols-12 gap-8 items-center relative z-10 w-full">
+        {/* Text column */}
         <motion.div
-          initial={{ opacity: 0, x: -40, scale: 0.97 }}
+          initial={{ opacity: 0, x: -30, scale: 0.97 }}
           animate={{ opacity: 1, x: 0, scale: 1 }}
           transition={{ duration: 0.9, ease: 'easeOut' }}
-          className="lg:col-span-7"
+          className="lg:col-span-7 order-2 lg:order-1"
         >
           <RotatingSlogan />
 
           <motion.h1
-            initial={{ opacity: 0, y: 30 }}
+            initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
-            className="text-6xl md:text-[90px] font-bold text-[#1a1a1a] leading-[0.9] mb-10 tracking-tighter"
+            className="text-[2.6rem] sm:text-6xl md:text-7xl lg:text-[90px] font-bold text-[#1a1a1a] leading-[0.9] mb-6 sm:mb-10 tracking-tighter"
           >
             {t('hero_title1')} <br />
             <span className="text-gray-300">{t('hero_title2')}</span> <br />
@@ -696,22 +763,21 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
           </motion.h1>
 
           <motion.p
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
-            className="text-xl text-gray-500 mb-12 max-w-lg leading-relaxed"
+            className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-12 max-w-lg leading-relaxed"
           >
             {t('hero_sub')}
           </motion.p>
 
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
+            initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
-            className="flex flex-col sm:flex-row gap-4"
+            className="flex flex-col sm:flex-row gap-3 sm:gap-4"
           >
-            {/* Subtle breathing pulse button */}
-            <div className="relative inline-flex">
+            <div className="relative inline-flex w-full sm:w-auto">
               <motion.span
                 animate={{ scale: [1, 1.12, 1], opacity: [0, 0.18, 0] }}
                 transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut', repeatDelay: 0.4 }}
@@ -721,25 +787,26 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={onStartQuiz}
-                className="relative px-10 py-5 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-colors flex items-center justify-center gap-3 shadow-xl z-10"
+                className="relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-colors flex items-center justify-center gap-3 shadow-xl z-10"
               >
                 {t('hero_cta')}
                 <ArrowRight size={16} />
               </motion.button>
             </div>
-            <button className="px-10 py-5 border border-gray-200 text-[#1a1a1a] text-sm font-semibold rounded-2xl hover:border-[#1a1a1a] hover:bg-gray-50 transition-all">
+            <button className="w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 border border-gray-200 text-[#1a1a1a] text-sm font-semibold rounded-2xl hover:border-[#1a1a1a] hover:bg-gray-50 transition-all">
               {t('hero_portfolio')}
             </button>
           </motion.div>
         </motion.div>
 
+        {/* Image column */}
         <motion.div
-          initial={{ opacity: 0, scale: 1.08 }}
+          initial={{ opacity: 0, scale: 1.06 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 1.4, ease: 'easeOut' }}
-          className="lg:col-span-5 relative mt-20 lg:mt-0"
+          className="lg:col-span-5 relative order-1 lg:order-2"
         >
-          <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[30px_30px_0px_0px_rgba(26,26,26,1)]">
+          <div className="relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden rounded-3xl shadow-[16px_16px_0px_0px_rgba(26,26,26,1)] sm:shadow-[30px_30px_0px_0px_rgba(26,26,26,1)]">
             <motion.img
               initial={{ scale: 1.12 }}
               animate={{ scale: 1 }}
@@ -751,17 +818,18 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
             />
           </div>
 
+          {/* Floating stat — adjusted so it doesn't overflow on mobile */}
           <motion.div
-            initial={{ y: 50, opacity: 0 }}
+            initial={{ y: 40, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
             transition={{ delay: 0.6, duration: 0.8 }}
-            className="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-xl p-8 shadow-2xl border border-gray-100 rounded-2xl"
+            className="absolute -bottom-6 sm:-bottom-10 left-2 sm:-left-10 bg-white/90 backdrop-blur-xl p-4 sm:p-8 shadow-2xl border border-gray-100 rounded-2xl"
           >
-            <div className="text-5xl font-bold text-[#1a1a1a] mb-1 tracking-tighter">10+</div>
-            <div className="text-[10px] font-bold uppercase tracking-[0.2em] text-gray-400">{t('hero_stat')}</div>
+            <div className="text-3xl sm:text-5xl font-bold text-[#1a1a1a] mb-0.5 sm:mb-1 tracking-tighter">10+</div>
+            <div className="text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-gray-400">{t('hero_stat')}</div>
           </motion.div>
 
-          <div className="absolute -top-6 -right-6 w-24 h-24 border-t-2 border-r-2 border-[#1a1a1a] rounded-tr-3xl" />
+          <div className="hidden sm:block absolute -top-6 -right-6 w-24 h-24 border-t-2 border-r-2 border-[#1a1a1a] rounded-tr-3xl" />
         </motion.div>
       </div>
     </section>
@@ -777,9 +845,9 @@ const HowItWorks = ({ lang }: { lang: Language }) => {
   ];
 
   return (
-    <section className="py-24 bg-white">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-center text-[#1a1a1a] mb-16 tracking-tighter">
+    <section className="py-16 sm:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-[#1a1a1a] mb-10 sm:mb-16 tracking-tighter">
           {t('hiw_title')}
         </h2>
         <div className="grid md:grid-cols-3 gap-6">
@@ -863,7 +931,7 @@ const Quiz = ({
         transition={{ duration: 0.25 }}
         className="bg-white rounded-3xl w-full max-w-2xl shadow-2xl overflow-hidden"
       >
-        <div className="px-8 pt-8 pb-6 border-b border-gray-100">
+        <div className="px-4 sm:px-8 pt-5 sm:pt-8 pb-4 sm:pb-6 border-b border-gray-100">
           <div className="flex justify-between items-center mb-5">
             <p className="text-xs font-bold text-gray-400 uppercase tracking-widest">
               {t('quiz_step')} {step} {t('quiz_of')} 5
@@ -885,7 +953,7 @@ const Quiz = ({
           </div>
         </div>
 
-        <div className="px-8 py-8">
+        <div className="px-4 sm:px-8 py-5 sm:py-8">
           <AnimatePresence mode="wait">
             {step === 1 && (
               <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
@@ -1041,9 +1109,9 @@ const Trust = ({ lang }: { lang: Language }) => {
   ];
 
   return (
-    <section className="py-24 bg-[#f8f9fa]">
-      <div className="max-w-7xl mx-auto px-4">
-        <h2 className="text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-16 text-center tracking-tighter">
+    <section className="py-16 sm:py-24 bg-[#f8f9fa]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-5xl font-bold text-[#1a1a1a] mb-10 sm:mb-16 text-center tracking-tighter">
           {t('trust_title')}
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-16">
@@ -1078,9 +1146,9 @@ const Trust = ({ lang }: { lang: Language }) => {
 const AboutUs = ({ lang }: { lang: Language }) => {
   const t = useT(lang);
   return (
-    <section className="py-24 bg-white overflow-hidden">
-      <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
-        <div className="relative aspect-[3/4] overflow-hidden shadow-2xl rounded-3xl">
+    <section className="py-16 sm:py-24 bg-white overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 grid md:grid-cols-2 gap-8 sm:gap-16 items-center">
+        <div className="relative aspect-[4/3] sm:aspect-[3/4] overflow-hidden shadow-2xl rounded-3xl">
           <img
             src="https://scontent-fra3-2.xx.fbcdn.net/v/t39.30808-6/619251008_25957312983892753_2068975750634700272_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=13d280&_nc_ohc=Mmaoto8PhOwQ7kNvwF84uy6&_nc_oc=AdqwLTBjJms1TjNswHIHuZCjSgratJoKvLfdL4-Qzsb0TmMBgTpJ97yf3Gd3-l95LW8&_nc_zt=23&_nc_ht=scontent-fra3-2.xx&_nc_gid=f96pfn4zcdbBIVyVrXW77Q&_nc_ss=7a3a8&oh=00_AfzYsBxCAfYrhPkvmWNhqiw9eDeSOfjNWbIaNgiIheXZVw&oe=69D05BB7"
             alt="Founder"
@@ -1126,9 +1194,9 @@ const FAQ = ({ lang }: { lang: Language }) => {
   ];
 
   return (
-    <section className="py-24 bg-[#f8f9fa]">
-      <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-12 text-center tracking-tighter">{t('faq_title')}</h2>
+    <section className="py-16 sm:py-24 bg-[#f8f9fa]">
+      <div className="max-w-3xl mx-auto px-4 sm:px-6">
+        <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-8 sm:mb-12 text-center tracking-tighter">{t('faq_title')}</h2>
         <div className="space-y-3">
           {faqs.map((faq, idx) => (
             <motion.div key={idx} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
