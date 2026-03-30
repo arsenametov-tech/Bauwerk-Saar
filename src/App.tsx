@@ -39,6 +39,7 @@ interface QuizData {
   area: number;
   style: DesignStyle | '';
   photo: File | null;
+  description: string;
   name: string;
   email: string;
   whatsapp: string;
@@ -80,6 +81,8 @@ const T = {
     quiz_s4_title: 'Foto des Raumes hochladen',
     quiz_s4_btn: 'Foto auswählen',
     quiz_s4_drag: 'Oder hierher ziehen',
+    quiz_s4_desc_label: 'Beschreibung & Wünsche',
+    quiz_s4_desc_ph: 'Beschreiben Sie Ihre Wünsche, Abmessungen des Raumes (z.B. 4 × 5 m, Deckenhöhe 2,7 m), besondere Anforderungen oder Materialvorstellungen…',
     quiz_s5_title: 'Fast fertig!',
     quiz_s5_sub: 'Wohin sollen wir die Ergebnisse senden?',
     quiz_label_name: 'Vor- und Nachname *',
@@ -160,6 +163,8 @@ const T = {
     quiz_s4_title: 'Загрузите фото помещения',
     quiz_s4_btn: 'Выбрать фото',
     quiz_s4_drag: 'Или перетащите сюда',
+    quiz_s4_desc_label: 'Описание и пожелания',
+    quiz_s4_desc_ph: 'Опишите ваши пожелания, размеры помещения (например, 4 × 5 м, высота потолков 2,7 м), особые требования или предпочтения по материалам…',
     quiz_s5_title: 'Почти готово!',
     quiz_s5_sub: 'Куда нам отправить результаты?',
     quiz_label_name: 'Имя / Фамилия *',
@@ -240,6 +245,8 @@ const T = {
     quiz_s4_title: 'Upload a photo of the room',
     quiz_s4_btn: 'Choose photo',
     quiz_s4_drag: 'Or drag it here',
+    quiz_s4_desc_label: 'Description & wishes',
+    quiz_s4_desc_ph: 'Describe your wishes, room dimensions (e.g. 4 × 5 m, ceiling height 2.7 m), special requirements or material preferences…',
     quiz_s5_title: 'Almost done!',
     quiz_s5_sub: 'Where should we send the results?',
     quiz_label_name: 'First & Last name *',
@@ -320,6 +327,8 @@ const T = {
     quiz_s4_title: 'Odanın fotoğrafını yükleyin',
     quiz_s4_btn: 'Fotoğraf seç',
     quiz_s4_drag: 'Veya buraya sürükleyin',
+    quiz_s4_desc_label: 'Açıklama ve istekler',
+    quiz_s4_desc_ph: 'İsteklerinizi, oda boyutlarını (örn. 4 × 5 m, tavan yüksekliği 2,7 m), özel gereksinimlerinizi veya malzeme tercihlerinizi açıklayın…',
     quiz_s5_title: 'Neredeyse bitti!',
     quiz_s5_sub: 'Sonuçları nereye gönderelim?',
     quiz_label_name: 'Ad / Soyad *',
@@ -400,6 +409,8 @@ const T = {
     quiz_s4_title: 'Завантажте фото приміщення',
     quiz_s4_btn: 'Обрати фото',
     quiz_s4_drag: 'Або перетягніть сюди',
+    quiz_s4_desc_label: 'Опис та побажання',
+    quiz_s4_desc_ph: 'Опишіть ваші побажання, розміри приміщення (напр. 4 × 5 м, висота стель 2,7 м), особливі вимоги або переваги щодо матеріалів…',
     quiz_s5_title: 'Майже готово!',
     quiz_s5_sub: 'Куди надіслати результати?',
     quiz_label_name: 'Ім\'я / Прізвище *',
@@ -889,6 +900,7 @@ const Quiz = ({
     area: 50,
     style: '',
     photo: null,
+    description: '',
     name: '',
     email: '',
     whatsapp: '',
@@ -1020,8 +1032,8 @@ const Quiz = ({
             {step === 4 && (
               <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6 tracking-tight">{t('quiz_s4_title')}</h2>
-                <div className="border-2 border-dashed border-gray-200 rounded-3xl p-12 text-center hover:border-[#1a1a1a] transition-colors group">
-                  <input type="file" className="hidden" id="photo-upload" onChange={(e) => setData({ ...data, photo: e.target.files?.[0] || null })} />
+                <div className="border-2 border-dashed border-gray-200 rounded-3xl p-8 sm:p-12 text-center hover:border-[#1a1a1a] transition-colors group">
+                  <input type="file" accept="image/*" className="hidden" id="photo-upload" onChange={(e) => setData({ ...data, photo: e.target.files?.[0] || null })} />
                   <label htmlFor="photo-upload" className="cursor-pointer">
                     <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-[#1a1a1a] group-hover:text-white transition-all">
                       <Upload size={28} />
@@ -1031,7 +1043,19 @@ const Quiz = ({
                     {data.photo && <p className="mt-4 text-green-600 font-semibold text-sm">✓ {data.photo.name}</p>}
                   </label>
                 </div>
-                <div className="flex justify-between mt-8">
+                <div className="mt-5">
+                  <label className="block text-xs font-semibold text-[#1a1a1a] mb-1.5 uppercase tracking-wider">
+                    {t('quiz_s4_desc_label')}
+                  </label>
+                  <textarea
+                    rows={4}
+                    value={data.description}
+                    onChange={(e) => setData({ ...data, description: e.target.value })}
+                    className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a1a1a] outline-none transition-all text-sm bg-gray-50 focus:bg-white resize-none"
+                    placeholder={t('quiz_s4_desc_ph')}
+                  />
+                </div>
+                <div className="flex justify-between mt-6">
                   <button onClick={prevStep} className="flex items-center gap-2 text-gray-400 font-semibold text-sm hover:text-gray-600 transition-colors">
                     <ChevronLeft size={16} /> {t('quiz_back')}
                   </button>
@@ -1387,6 +1411,7 @@ export default function App() {
       `🛠 *Bereich:* ${typeLabels[data.type] || data.type}`,
       `📐 *Fläche:* ${data.area} m²`,
       `🎨 *Stil:* ${styleLabels[data.style] || data.style}`,
+      ...(data.description ? [`💬 *Beschreibung:* ${data.description}`] : []),
       `📅 *Datum:* ${new Date().toLocaleString('de-DE')}`,
     ].join('\n');
 
@@ -1406,6 +1431,7 @@ export default function App() {
     formData.append('type', typeLabels[data.type] || data.type);
     formData.append('area', `${data.area} m²`);
     formData.append('style', styleLabels[data.style] || data.style);
+    if (data.description) formData.append('description', data.description);
     if (data.photo) formData.append('photo', data.photo);
 
     const formspreePromise = fetch(FORMSPREE_URL, {
