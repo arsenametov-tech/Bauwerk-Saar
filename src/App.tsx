@@ -48,7 +48,7 @@ interface QuizData {
 const T = {
   de: {
     nav_contact: 'Kontakt',
-    hero_label: 'Construction & Design Studio',
+    write_us: 'Schreiben Sie uns',
     hero_title1: 'Wir gestalten',
     hero_title2: 'die Zukunft',
     hero_title3: 'im Saarland',
@@ -115,20 +115,20 @@ const T = {
     footer_sub: 'Ihr Partner für professionellen Bau und Renovierung im Saarland.',
     footer_contact: 'Kontakt',
     footer_legal: 'Rechtliches',
-    footer_rights: '© 2026 Saar-Bau Team. Alle Rechte vorbehalten.',
-    cookie_text: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Mit der weiteren Nutzung unserer Website stimmen Sie unserer',
+    footer_rights: '© 2026 Bauwerk_Saar. Alle Rechte vorbehalten.',
+    cookie_text: 'Wir verwenden Cookies, um Ihre Erfahrung zu verbessern. Mit der weiteren Nutzung stimmen Sie unserer',
     cookie_link: 'Datenschutzerklärung',
     cookie_text2: 'zu.',
     cookie_decline: 'Ablehnen',
     cookie_accept: 'Alle akzeptieren',
     thanks_title: 'Vielen Dank! Ihre Anfrage wird bearbeitet.',
-    thanks_sub: 'Unser KI-Assistent und unsere Experten haben bereits mit der Arbeit an Ihrem Projekt begonnen. Ihren PDF-Bericht erhalten Sie innerhalb von 24 Stunden. Folgen Sie uns auf Instagram und sehen Sie unsere neuesten Arbeiten!',
+    thanks_sub: 'Unser KI-Assistent und unsere Experten haben bereits mit der Arbeit an Ihrem Projekt begonnen. Ihren PDF-Bericht erhalten Sie innerhalb von 24 Stunden.',
     thanks_ig: 'Folgen Sie uns auf Instagram',
     project_label: 'Projekt',
   },
   ru: {
     nav_contact: 'Контакт',
-    hero_label: 'Construction & Design Studio',
+    write_us: 'Напишите нам',
     hero_title1: 'Создаём',
     hero_title2: 'будущее',
     hero_title3: 'в Сааре',
@@ -195,20 +195,20 @@ const T = {
     footer_sub: 'Ваш партнер по профессиональному строительству и ремонту в Саарланде.',
     footer_contact: 'Контакт',
     footer_legal: 'Юридическая информация',
-    footer_rights: '© 2026 Saar-Bau Team. Все права защищены.',
-    cookie_text: 'Мы используем файлы cookie для улучшения вашего опыта. Используя наш сайт, вы соглашаетесь с нашей',
+    footer_rights: '© 2026 Bauwerk_Saar. Все права защищены.',
+    cookie_text: 'Мы используем файлы cookie. Используя наш сайт, вы соглашаетесь с нашей',
     cookie_link: 'Политикой конфиденциальности',
     cookie_text2: '.',
     cookie_decline: 'Отклонить',
     cookie_accept: 'Принять все',
     thanks_title: 'Спасибо! Ваш запрос обрабатывается.',
     thanks_sub: 'Наш ИИ-ассистент и специалисты уже начали работу над вашим проектом. Ожидайте PDF-отчет в течение 24 часов.',
-    thanks_ig: 'Подпишитесь на Instagram',
+    thanks_ig: 'Подписаться на Instagram',
     project_label: 'Объект',
   },
   en: {
     nav_contact: 'Contact',
-    hero_label: 'Construction & Design Studio',
+    write_us: 'Write to us',
     hero_title1: 'We shape',
     hero_title2: 'the future',
     hero_title3: 'in Saarland',
@@ -220,7 +220,7 @@ const T = {
     hiw_s1_title: 'Step 1: Answer questions',
     hiw_s1_desc: 'Answer 5 short questions about your property. It takes only 2 minutes.',
     hiw_s2_title: 'Step 2: Upload photo',
-    hiw_s2_desc: 'Upload a photo of the current state of the room – directly from your phone for AI visualization.',
+    hiw_s2_desc: 'Upload a photo of the current state of the room for AI visualization.',
     hiw_s3_title: 'Step 3: Get concept',
     hiw_s3_desc: 'Receive a PDF with a budget estimate and AI design via WhatsApp or Email.',
     quiz_step: 'Step',
@@ -262,20 +262,20 @@ const T = {
     trust_f3_desc: 'We provide a detailed estimate that remains unchanged.',
     about_title: 'Who are we?',
     about_p1: 'We are a professional team operating throughout Saarland. Our mission is to make renovation transparent and predictable for every client.',
-    about_p2: 'Using modern technologies and over 10 years of construction experience, we help you realize your most ambitious projects on time and to the highest quality.',
+    about_p2: 'Using modern technologies and over 10 years of construction experience, we help you realize your most ambitious projects on time.',
     about_stat1: 'Years of experience',
     about_stat2: 'Quality',
     faq_title: 'Frequently Asked Questions',
     faq_q1: 'How accurate is the cost estimate?',
-    faq_a1: 'Our algorithm provides an estimate with 85–90% accuracy based on your answers. The final quote is prepared after a free on-site visit.',
+    faq_a1: 'Our algorithm provides an estimate with 85–90% accuracy. The final quote is prepared after a free on-site visit.',
     faq_q2: 'Is it really free?',
     faq_a2: 'Yes, the cost estimate and AI visualization are completely free and non-binding.',
     faq_q3: 'How does the AI design work?',
-    faq_a3: 'We use neural networks trained on thousands of modern interiors to create a realistic concept in your chosen style based on your photo.',
+    faq_a3: 'We use neural networks trained on thousands of modern interiors to create a realistic concept in your chosen style.',
     footer_sub: 'Your partner for professional construction and renovation in Saarland.',
     footer_contact: 'Contact',
     footer_legal: 'Legal',
-    footer_rights: '© 2026 Saar-Bau Team. All rights reserved.',
+    footer_rights: '© 2026 Bauwerk_Saar. All rights reserved.',
     cookie_text: 'We use cookies to improve your experience. By using our site, you agree to our',
     cookie_link: 'Privacy Policy',
     cookie_text2: '.',
@@ -288,7 +288,7 @@ const T = {
   },
   tr: {
     nav_contact: 'İletişim',
-    hero_label: 'Construction & Design Studio',
+    write_us: 'Bize yazın',
     hero_title1: 'Geleceği',
     hero_title2: 'şekillendiriyoruz',
     hero_title3: "Saarland'da",
@@ -337,38 +337,38 @@ const T = {
     trust_f1_title: 'Zamanında teslimat',
     trust_f1_desc: 'Tarihleri sözleşmede belirliyor ve bunlara uymayı garanti ediyoruz.',
     trust_f2_title: 'Kalite standartları',
-    trust_f2_desc: 'Tüm işler, inşaat yönetmeliklerine ve standartlarına uygun olarak yapılır.',
+    trust_f2_desc: 'Tüm işler, inşaat yönetmeliklerine uygun olarak yapılır.',
     trust_f3_title: 'Şeffaf teklif',
     trust_f3_desc: 'Değişmeyen ayrıntılı bir maliyet tahmini sunuyoruz.',
     about_title: 'Biz kimiz?',
-    about_p1: "Saarland genelinde faaliyet gösteren profesyonel bir ekibiz. Misyonumuz, tadilat sürecini her müşteri için şeffaf ve öngörülebilir kılmak.",
-    about_p2: "Modern teknolojiler ve 10 yılı aşkın inşaat deneyimiyle en iddialı projelerinizi zamanında ve yüksek kalitede hayata geçirmenize yardımcı oluyoruz.",
+    about_p1: "Saarland genelinde faaliyet gösteren profesyonel bir ekibiz. Misyonumuz, tadilat sürecini şeffaf ve öngörülebilir kılmak.",
+    about_p2: "Modern teknolojiler ve 10 yılı aşkın deneyimle en iddialı projelerinizi zamanında hayata geçiriyoruz.",
     about_stat1: 'Yıllık deneyim',
     about_stat2: 'Kalite',
     faq_title: 'Sıkça Sorulan Sorular',
     faq_q1: 'Maliyet tahmini ne kadar doğru?',
-    faq_a1: 'Algoritmamız, yanıtlarınıza göre %85–90 doğrulukla tahmini bir maliyet sunar.',
+    faq_a1: 'Algoritmamız, %85–90 doğrulukla tahmini bir maliyet sunar.',
     faq_q2: 'Gerçekten ücretsiz mi?',
-    faq_a2: 'Evet, maliyet tahmini ve AI görselleştirmesi tamamen ücretsiz ve bağlayıcı değildir.',
+    faq_a2: 'Evet, maliyet tahmini ve AI görselleştirmesi tamamen ücretsiz.',
     faq_q3: 'AI tasarımı nasıl çalışır?',
-    faq_a3: 'Fotoğrafınız temelinde seçilen stilde gerçekçi bir konsept oluşturmak için binlerce modern iç mekan üzerinde eğitilmiş sinir ağları kullanıyoruz.',
+    faq_a3: 'Binlerce iç mekan üzerinde eğitilmiş sinir ağları kullanarak seçilen stilde konsept oluşturuyoruz.',
     footer_sub: "Saarland'da profesyonel inşaat ve tadilat ortağınız.",
     footer_contact: 'İletişim',
     footer_legal: 'Hukuki Bilgiler',
-    footer_rights: '© 2026 Saar-Bau Team. Tüm hakları saklıdır.',
+    footer_rights: '© 2026 Bauwerk_Saar. Tüm hakları saklıdır.',
     cookie_text: 'Deneyiminizi iyileştirmek için çerezler kullanıyoruz.',
     cookie_link: 'Gizlilik Politikamızı',
     cookie_text2: 'kabul etmiş sayılırsınız.',
     cookie_decline: 'Reddet',
     cookie_accept: 'Tümünü kabul et',
     thanks_title: 'Teşekkürler! Talebiniz işleniyor.',
-    thanks_sub: 'AI asistanımız ve uzmanlarımız projeniz üzerinde çalışmaya başladı. PDF raporunuzu 24 saat içinde alacaksınız.',
+    thanks_sub: 'AI asistanımız projeniz üzerinde çalışmaya başladı. PDF raporunuzu 24 saat içinde alacaksınız.',
     thanks_ig: "Instagram'da bizi takip edin",
     project_label: 'Proje',
   },
   uk: {
     nav_contact: 'Контакт',
-    hero_label: 'Construction & Design Studio',
+    write_us: 'Напишіть нам',
     hero_title1: 'Будуємо',
     hero_title2: 'майбутнє',
     hero_title3: 'у Саарланді',
@@ -378,7 +378,7 @@ const T = {
     hero_stat: 'Років досвіду',
     hiw_title: 'Ваш будинок мрії за 3 простих кроки',
     hiw_s1_title: 'Крок 1: Дайте відповіді',
-    hiw_s1_desc: 'Дайте відповідь на 5 коротких питань про ваш об\'єкт. Це займе лише 2 хвилини.',
+    hiw_s1_desc: 'Дайте відповідь на 5 коротких питань. Це займе лише 2 хвилини.',
     hiw_s2_title: 'Крок 2: Завантажте фото',
     hiw_s2_desc: 'Завантажте фото поточного стану — прямо з телефону для ІІ-візуалізації.',
     hiw_s3_title: 'Крок 3: Отримайте концепцію',
@@ -417,32 +417,32 @@ const T = {
     trust_f1_title: 'Дотримання строків',
     trust_f1_desc: 'Ми фіксуємо терміни у договорі та гарантуємо їх виконання.',
     trust_f2_title: 'Стандарти якості',
-    trust_f2_desc: 'Усі роботи виконуються суворо за будівельними нормами та стандартами.',
+    trust_f2_desc: 'Усі роботи виконуються суворо за будівельними нормами.',
     trust_f3_title: 'Прозрачна кошторис',
     trust_f3_desc: 'Ми надаємо детальний розрахунок, який залишається незмінним.',
     about_title: 'Хто ми?',
-    about_p1: 'Ми — професійна команда, що працює по всій землі Саарланд. Наша місія — зробити ремонт прозорим і передбачуваним для кожного клієнта.',
-    about_p2: 'Використовуючи сучасні технології та понад 10-річний досвід у будівництві, ми допомагаємо вам реалізувати найсміливіші проєкти якісно та вчасно.',
+    about_p1: 'Ми — професійна команда, що працює по всій землі Саарланд. Наша місія — зробити ремонт прозорим і передбачуваним.',
+    about_p2: 'Використовуючи сучасні технології та понад 10-річний досвід, ми допомагаємо вам реалізувати найсміливіші проєкти вчасно.',
     about_stat1: 'Років досвіду',
     about_stat2: 'Якість',
     faq_title: 'Часті питання',
     faq_q1: 'Наскільки точний розрахунок вартості?',
-    faq_a1: 'Наш алгоритм дає орієнтовну вартість з точністю 85–90%. Фінальний кошторис складається після безкоштовного виїзду спеціаліста.',
+    faq_a1: 'Наш алгоритм дає орієнтовну вартість з точністю 85–90%. Фінальний кошторис після безкоштовного виїзду.',
     faq_q2: 'Це дійсно безкоштовно?',
-    faq_a2: 'Так, розрахунок і ІІ-візуалізація надаються абсолютно безкоштовно та без зобов\'язань.',
+    faq_a2: 'Так, розрахунок і ІІ-візуалізація абсолютно безкоштовні.',
     faq_q3: 'Як працює ІІ-дизайн?',
-    faq_a3: 'Ми використовуємо нейромережі для створення реалістичного концепту у вибраному вами стилі на основі вашого фото.',
-    footer_sub: 'Ваш партнер з професійного будівництва та ремонту у Саарланді.',
+    faq_a3: 'Нейромережі на основі фото створюють реалістичний концепт у вибраному стилі.',
+    footer_sub: 'Ваш партнер з будівництва та ремонту у Саарланді.',
     footer_contact: 'Контакт',
     footer_legal: 'Юридична інформація',
-    footer_rights: '© 2026 Saar-Bau Team. Усі права захищено.',
-    cookie_text: 'Ми використовуємо файли cookie для покращення вашого досвіду, погоджуючись з нашою',
+    footer_rights: '© 2026 Bauwerk_Saar. Усі права захищено.',
+    cookie_text: 'Ми використовуємо cookie, погоджуючись з нашою',
     cookie_link: 'Політикою конфіденційності',
     cookie_text2: '.',
     cookie_decline: 'Відхилити',
     cookie_accept: 'Прийняти всі',
     thanks_title: 'Дякуємо! Ваш запит обробляється.',
-    thanks_sub: 'Наш ІІ-асистент та спеціалісти вже почали роботу над вашим проєктом. Очікуйте PDF-звіт протягом 24 годин.',
+    thanks_sub: 'Наш ІІ-асистент вже почав роботу над вашим проєктом. Очікуйте PDF-звіт протягом 24 годин.',
     thanks_ig: 'Підписатися на Instagram',
     project_label: 'Об\'єкт',
   },
@@ -452,6 +452,63 @@ type TKey = keyof typeof T['de'];
 function useT(lang: Language) {
   return (key: TKey): string => T[lang][key] ?? T['de'][key];
 }
+
+// --- Rotating slogan data ---
+const SLOGANS = [
+  { text: 'Construction & Design Studio', color: '#1a1a1a', lineColor: '#1a1a1a' },
+  { text: 'Ihr Partner im Saarland', color: '#2563eb', lineColor: '#2563eb' },
+  { text: 'Qualität seit 10 Jahren', color: '#16a34a', lineColor: '#16a34a' },
+  { text: 'Modern. Präzise. Zuverlässig.', color: '#9333ea', lineColor: '#9333ea' },
+  { text: 'KI-gestütztes Design', color: '#ea580c', lineColor: '#ea580c' },
+];
+
+const sloganVariants = [
+  { initial: { opacity: 0, y: 10 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: -10 } },
+  { initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: -20 } },
+  { initial: { opacity: 0, scale: 0.85 }, animate: { opacity: 1, scale: 1 }, exit: { opacity: 0, scale: 1.1 } },
+  { initial: { opacity: 0, y: -10 }, animate: { opacity: 1, y: 0 }, exit: { opacity: 0, y: 10 } },
+  { initial: { opacity: 0, x: -20 }, animate: { opacity: 1, x: 0 }, exit: { opacity: 0, x: 20 } },
+];
+
+const RotatingSlogan = () => {
+  const [idx, setIdx] = useState(0);
+
+  useEffect(() => {
+    const timer = setInterval(() => setIdx((i) => (i + 1) % SLOGANS.length), 3000);
+    return () => clearInterval(timer);
+  }, []);
+
+  const slogan = SLOGANS[idx];
+  const variant = sloganVariants[idx % sloganVariants.length];
+
+  return (
+    <div className="inline-flex items-center gap-4 mb-8 h-6 overflow-visible">
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`line-${idx}`}
+          initial={{ width: 0, opacity: 0 }}
+          animate={{ width: 48, opacity: 1 }}
+          exit={{ width: 0, opacity: 0 }}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          style={{ backgroundColor: slogan.lineColor, height: '1px', flexShrink: 0 }}
+        />
+      </AnimatePresence>
+      <AnimatePresence mode="wait">
+        <motion.div
+          key={`slogan-${idx}`}
+          initial={variant.initial}
+          animate={variant.animate}
+          exit={variant.exit}
+          transition={{ duration: 0.4, ease: 'easeInOut' }}
+          className="text-[10px] font-bold uppercase tracking-[0.4em] whitespace-nowrap"
+          style={{ color: slogan.color }}
+        >
+          {slogan.text}
+        </motion.div>
+      </AnimatePresence>
+    </div>
+  );
+};
 
 // --- Components ---
 
@@ -521,16 +578,29 @@ const Header = ({
 
   return (
     <header className="sticky top-0 w-full bg-white/80 backdrop-blur-xl border-b border-gray-100/80 z-40">
-      <div className="max-w-7xl mx-auto px-4 h-18 flex items-center justify-between py-3">
+      <div className="max-w-7xl mx-auto px-4 flex items-center justify-between py-3">
         <div className="flex items-center gap-2.5">
           <div className="w-10 h-10 bg-[#1a1a1a] rounded-2xl flex items-center justify-center shadow-md">
             <HardHat className="text-white w-5 h-5" />
           </div>
-          <span className="text-lg font-bold tracking-tight text-[#1a1a1a]">Saar-Bau Team</span>
+          <span className="text-lg font-bold tracking-tight text-[#1a1a1a]">Bauwerk_Saar</span>
         </div>
 
         <div className="hidden md:flex items-center gap-4">
+          {/* Write-to-us + messenger icons */}
           <div className="flex items-center gap-3 border-r border-gray-100 pr-4">
+            <div className="flex flex-col items-center gap-1 mr-1">
+              <motion.span
+                animate={{ x: [0, 5, 0] }}
+                transition={{ repeat: Infinity, duration: 1.4, ease: 'easeInOut' }}
+                className="text-gray-400"
+              >
+                <ArrowRight size={13} />
+              </motion.span>
+              <span className="text-[8px] font-bold uppercase tracking-widest text-gray-400 whitespace-nowrap leading-none">
+                {t('write_us')}
+              </span>
+            </div>
             <a
               href="https://wa.me/49123456789"
               target="_blank"
@@ -549,13 +619,14 @@ const Header = ({
             </a>
           </div>
 
+          {/* Language switcher */}
           <div className="relative">
             <button
               onClick={() => setIsLangOpen(!isLangOpen)}
-              className="flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-gray-50 text-sm font-semibold text-[#1a1a1a] transition-all"
+              className="flex items-center gap-1.5 px-3 py-2 rounded-xl hover:bg-gray-50 text-sm font-semibold text-[#1a1a1a] transition-all"
             >
               <Globe size={15} />
-              <span className="uppercase text-xs tracking-wider">{activeLang?.flag} {activeLang?.code.toUpperCase()}</span>
+              <span className="text-base">{activeLang?.flag}</span>
               <ChevronDown size={13} className={`transition-transform duration-200 ${isLangOpen ? 'rotate-180' : ''}`} />
             </button>
 
@@ -606,37 +677,51 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
 
       <div className="max-w-7xl mx-auto px-4 grid lg:grid-cols-12 gap-0 items-center relative z-10">
         <motion.div
-          initial={{ opacity: 0, x: -30 }}
-          animate={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.8, ease: 'easeOut' }}
+          initial={{ opacity: 0, x: -40, scale: 0.97 }}
+          animate={{ opacity: 1, x: 0, scale: 1 }}
+          transition={{ duration: 0.9, ease: 'easeOut' }}
           className="lg:col-span-7"
         >
-          <div className="inline-flex items-center gap-4 mb-8">
-            <div className="h-[1px] w-12 bg-[#1a1a1a]" />
-            <div className="text-[10px] font-bold uppercase tracking-[0.4em] text-[#1a1a1a]">
-              {t('hero_label')}
-            </div>
-          </div>
+          <RotatingSlogan />
 
-          <h1 className="text-6xl md:text-[90px] font-bold text-[#1a1a1a] leading-[0.9] mb-10 tracking-tighter">
+          <motion.h1
+            initial={{ opacity: 0, y: 30 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.15, ease: 'easeOut' }}
+            className="text-6xl md:text-[90px] font-bold text-[#1a1a1a] leading-[0.9] mb-10 tracking-tighter"
+          >
             {t('hero_title1')} <br />
             <span className="text-gray-300">{t('hero_title2')}</span> <br />
             {t('hero_title3')}
-          </h1>
+          </motion.h1>
 
-          <p className="text-xl text-gray-500 mb-12 max-w-lg leading-relaxed">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.7, delay: 0.3, ease: 'easeOut' }}
+            className="text-xl text-gray-500 mb-12 max-w-lg leading-relaxed"
+          >
             {t('hero_sub')}
-          </p>
+          </motion.p>
 
-          <div className="flex flex-col sm:flex-row gap-4">
-            {/* Pulsing CTA button */}
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.45, ease: 'easeOut' }}
+            className="flex flex-col sm:flex-row gap-4"
+          >
+            {/* Subtle breathing pulse button */}
             <div className="relative inline-flex">
-              <span className="absolute inset-0 rounded-2xl bg-[#1a1a1a] animate-ping opacity-20" />
+              <motion.span
+                animate={{ scale: [1, 1.12, 1], opacity: [0, 0.18, 0] }}
+                transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut', repeatDelay: 0.4 }}
+                className="absolute inset-0 rounded-2xl bg-[#1a1a1a] pointer-events-none"
+              />
               <motion.button
-                whileHover={{ scale: 1.04 }}
-                whileTap={{ scale: 0.96 }}
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
                 onClick={onStartQuiz}
-                className="relative px-10 py-5 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-all flex items-center justify-center gap-3 shadow-2xl z-10"
+                className="relative px-10 py-5 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-colors flex items-center justify-center gap-3 shadow-xl z-10"
               >
                 {t('hero_cta')}
                 <ArrowRight size={16} />
@@ -645,17 +730,20 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
             <button className="px-10 py-5 border border-gray-200 text-[#1a1a1a] text-sm font-semibold rounded-2xl hover:border-[#1a1a1a] hover:bg-gray-50 transition-all">
               {t('hero_portfolio')}
             </button>
-          </div>
+          </motion.div>
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, scale: 1.05 }}
+          initial={{ opacity: 0, scale: 1.08 }}
           animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.5, ease: 'easeOut' }}
+          transition={{ duration: 1.4, ease: 'easeOut' }}
           className="lg:col-span-5 relative mt-20 lg:mt-0"
         >
           <div className="relative aspect-[3/4] overflow-hidden rounded-3xl shadow-[30px_30px_0px_0px_rgba(26,26,26,1)]">
-            <img
+            <motion.img
+              initial={{ scale: 1.12 }}
+              animate={{ scale: 1 }}
+              transition={{ duration: 1.6, ease: 'easeOut' }}
               src="https://images.unsplash.com/photo-1613490493576-7fde63acd811?auto=format&fit=crop&q=80&w=1200"
               alt="Modern Luxury Villa"
               className="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-1000"
@@ -666,7 +754,7 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
           <motion.div
             initial={{ y: 50, opacity: 0 }}
             animate={{ y: 0, opacity: 1 }}
-            transition={{ delay: 0.5, duration: 0.8 }}
+            transition={{ delay: 0.6, duration: 0.8 }}
             className="absolute -bottom-10 -left-10 bg-white/90 backdrop-blur-xl p-8 shadow-2xl border border-gray-100 rounded-2xl"
           >
             <div className="text-5xl font-bold text-[#1a1a1a] mb-1 tracking-tighter">10+</div>
@@ -742,15 +830,8 @@ const Quiz = ({
   const nextStep = () => setStep((prev) => Math.min(prev + 1, 5) as QuizStep);
   const prevStep = () => setStep((prev) => Math.max(prev - 1, 1) as QuizStep);
 
-  const handleTypeSelect = (type: RenovationType) => {
-    setData({ ...data, type });
-    nextStep();
-  };
-
-  const handleStyleSelect = (style: DesignStyle) => {
-    setData({ ...data, style });
-    nextStep();
-  };
+  const handleTypeSelect = (type: RenovationType) => { setData({ ...data, type }); nextStep(); };
+  const handleStyleSelect = (style: DesignStyle) => { setData({ ...data, style }); nextStep(); };
 
   const progress = (step / 5) * 100;
 
@@ -807,23 +888,12 @@ const Quiz = ({
         <div className="px-8 py-8">
           <AnimatePresence mode="wait">
             {step === 1 && (
-              <motion.div
-                key="step1"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div key="step1" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6 tracking-tight">{t('quiz_s1_title')}</h2>
                 <div className="grid grid-cols-2 gap-3">
                   {renovationTypes.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => handleTypeSelect(item.id as RenovationType)}
-                      className={`p-4 rounded-2xl border-2 transition-all text-left group ${
-                        data.type === item.id ? 'border-[#1a1a1a] bg-[#1a1a1a]/5' : 'border-gray-100 hover:border-gray-300'
-                      }`}
-                    >
+                    <button key={item.id} onClick={() => handleTypeSelect(item.id as RenovationType)}
+                      className={`p-4 rounded-2xl border-2 transition-all text-left group ${data.type === item.id ? 'border-[#1a1a1a] bg-[#1a1a1a]/5' : 'border-gray-100 hover:border-gray-300'}`}>
                       <div className="aspect-video rounded-xl bg-gray-100 mb-3 overflow-hidden">
                         <img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       </div>
@@ -835,27 +905,15 @@ const Quiz = ({
             )}
 
             {step === 2 && (
-              <motion.div
-                key="step2"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div key="step2" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6 tracking-tight">{t('quiz_s2_title')}</h2>
                 <div className="bg-[#f8f9fa] p-10 rounded-3xl text-center">
                   <div className="text-6xl font-bold text-[#1a1a1a] mb-8 tracking-tighter">{data.area} m²</div>
-                  <input
-                    type="range"
-                    min="0"
-                    max="200"
-                    value={data.area}
+                  <input type="range" min="0" max="200" value={data.area}
                     onChange={(e) => setData({ ...data, area: parseInt(e.target.value) })}
-                    className="w-full h-1.5 bg-gray-200 rounded-full appearance-none cursor-pointer accent-[#1a1a1a]"
-                  />
+                    className="w-full h-1.5 bg-gray-200 rounded-full appearance-none cursor-pointer accent-[#1a1a1a]" />
                   <div className="flex justify-between mt-4 text-xs font-semibold text-gray-400">
-                    <span>0 m²</span>
-                    <span>200+ m²</span>
+                    <span>0 m²</span><span>200+ m²</span>
                   </div>
                 </div>
                 <div className="flex justify-between mt-8">
@@ -870,23 +928,12 @@ const Quiz = ({
             )}
 
             {step === 3 && (
-              <motion.div
-                key="step3"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div key="step3" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6 tracking-tight">{t('quiz_s3_title')}</h2>
                 <div className="grid grid-cols-2 gap-3">
                   {designStyles.map((item) => (
-                    <button
-                      key={item.id}
-                      onClick={() => handleStyleSelect(item.id as DesignStyle)}
-                      className={`p-4 rounded-2xl border-2 transition-all text-left group ${
-                        data.style === item.id ? 'border-[#1a1a1a] bg-[#1a1a1a]/5' : 'border-gray-100 hover:border-gray-300'
-                      }`}
-                    >
+                    <button key={item.id} onClick={() => handleStyleSelect(item.id as DesignStyle)}
+                      className={`p-4 rounded-2xl border-2 transition-all text-left group ${data.style === item.id ? 'border-[#1a1a1a] bg-[#1a1a1a]/5' : 'border-gray-100 hover:border-gray-300'}`}>
                       <div className="aspect-video rounded-xl bg-gray-100 mb-3 overflow-hidden">
                         <img src={item.img} alt={item.label} className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-500" />
                       </div>
@@ -903,30 +950,17 @@ const Quiz = ({
             )}
 
             {step === 4 && (
-              <motion.div
-                key="step4"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div key="step4" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-6 tracking-tight">{t('quiz_s4_title')}</h2>
                 <div className="border-2 border-dashed border-gray-200 rounded-3xl p-12 text-center hover:border-[#1a1a1a] transition-colors group">
-                  <input
-                    type="file"
-                    className="hidden"
-                    id="photo-upload"
-                    onChange={(e) => setData({ ...data, photo: e.target.files?.[0] || null })}
-                  />
+                  <input type="file" className="hidden" id="photo-upload" onChange={(e) => setData({ ...data, photo: e.target.files?.[0] || null })} />
                   <label htmlFor="photo-upload" className="cursor-pointer">
                     <div className="w-16 h-16 bg-gray-50 rounded-2xl flex items-center justify-center mx-auto mb-5 group-hover:bg-[#1a1a1a] group-hover:text-white transition-all">
                       <Upload size={28} />
                     </div>
                     <p className="text-sm font-semibold text-[#1a1a1a] mb-1">{t('quiz_s4_btn')}</p>
                     <p className="text-xs text-gray-400">{t('quiz_s4_drag')}</p>
-                    {data.photo && (
-                      <p className="mt-4 text-green-600 font-semibold text-sm">✓ {data.photo.name}</p>
-                    )}
+                    {data.photo && <p className="mt-4 text-green-600 font-semibold text-sm">✓ {data.photo.name}</p>}
                   </label>
                 </div>
                 <div className="flex justify-between mt-8">
@@ -941,74 +975,42 @@ const Quiz = ({
             )}
 
             {step === 5 && (
-              <motion.div
-                key="step5"
-                initial={{ opacity: 0, x: 20 }}
-                animate={{ opacity: 1, x: 0 }}
-                exit={{ opacity: 0, x: -20 }}
-                transition={{ duration: 0.2 }}
-              >
+              <motion.div key="step5" initial={{ opacity: 0, x: 20 }} animate={{ opacity: 1, x: 0 }} exit={{ opacity: 0, x: -20 }} transition={{ duration: 0.2 }}>
                 <h2 className="text-2xl font-bold text-[#1a1a1a] mb-1 tracking-tight">{t('quiz_s5_title')}</h2>
                 <p className="text-gray-400 text-sm mb-6">{t('quiz_s5_sub')}</p>
-
                 <div className="space-y-4">
                   <div>
                     <label className="block text-xs font-semibold text-[#1a1a1a] mb-1.5 uppercase tracking-wider">{t('quiz_label_name')}</label>
-                    <input
-                      type="text"
-                      required
-                      value={data.name}
-                      onChange={(e) => setData({ ...data, name: e.target.value })}
+                    <input type="text" required value={data.name} onChange={(e) => setData({ ...data, name: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a1a1a] outline-none transition-all text-sm bg-gray-50 focus:bg-white"
-                      placeholder={t('quiz_ph_name')}
-                    />
+                      placeholder={t('quiz_ph_name')} />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#1a1a1a] mb-1.5 uppercase tracking-wider">{t('quiz_label_email')}</label>
-                    <input
-                      type="email"
-                      required
-                      value={data.email}
-                      onChange={(e) => setData({ ...data, email: e.target.value })}
+                    <input type="email" required value={data.email} onChange={(e) => setData({ ...data, email: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a1a1a] outline-none transition-all text-sm bg-gray-50 focus:bg-white"
-                      placeholder={t('quiz_ph_email')}
-                    />
+                      placeholder={t('quiz_ph_email')} />
                   </div>
                   <div>
                     <label className="block text-xs font-semibold text-[#1a1a1a] mb-1.5 uppercase tracking-wider">{t('quiz_label_wa')}</label>
-                    <input
-                      type="tel"
-                      value={data.whatsapp}
-                      onChange={(e) => setData({ ...data, whatsapp: e.target.value })}
+                    <input type="tel" value={data.whatsapp} onChange={(e) => setData({ ...data, whatsapp: e.target.value })}
                       className="w-full px-4 py-3 rounded-xl border border-gray-200 focus:border-[#1a1a1a] outline-none transition-all text-sm bg-gray-50 focus:bg-white"
-                      placeholder={t('quiz_ph_wa')}
-                    />
+                      placeholder={t('quiz_ph_wa')} />
                   </div>
-
                   <div className="flex items-start gap-3 pt-2">
-                    <input
-                      type="checkbox"
-                      id="terms"
-                      checked={data.agreedToTerms}
-                      onChange={(e) => setData({ ...data, agreedToTerms: e.target.checked })}
-                      className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[#1a1a1a] focus:ring-[#1a1a1a]"
-                    />
+                    <input type="checkbox" id="terms" checked={data.agreedToTerms} onChange={(e) => setData({ ...data, agreedToTerms: e.target.checked })}
+                      className="mt-0.5 w-4 h-4 rounded border-gray-300 text-[#1a1a1a] focus:ring-[#1a1a1a]" />
                     <label htmlFor="terms" className="text-xs text-gray-500 leading-relaxed">
                       {t('quiz_terms')}{' '}
                       <a href="#privacy" className="underline font-semibold text-[#1a1a1a]">{t('quiz_terms_link')}</a>
-                      {t('quiz_terms2')}
+                      {' '}{t('quiz_terms2')}
                     </label>
                   </div>
-
-                  <button
-                    disabled={!data.name || !data.email || !data.agreedToTerms}
-                    onClick={() => onComplete(data)}
-                    className="w-full py-4 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-xl active:scale-[0.98]"
-                  >
+                  <button disabled={!data.name || !data.email || !data.agreedToTerms} onClick={() => onComplete(data)}
+                    className="w-full py-4 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-all disabled:opacity-40 disabled:cursor-not-allowed shadow-xl active:scale-[0.98]">
                     {t('quiz_submit')}
                   </button>
                 </div>
-
                 <button onClick={prevStep} className="flex items-center gap-2 text-gray-400 font-semibold text-sm hover:text-gray-600 transition-colors mt-6 mx-auto">
                   <ChevronLeft size={16} /> {t('quiz_back')}
                 </button>
@@ -1029,6 +1031,15 @@ const Trust = ({ lang }: { lang: Language }) => {
     { icon: <ShieldCheck className="w-5 h-5" />, title: t('trust_f3_title'), desc: t('trust_f3_desc') },
   ];
 
+  const projectImages = [
+    'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=800',
+    'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
+    'https://images.unsplash.com/photo-1631679706909-1844bbd07221?auto=format&fit=crop&q=80&w=800',
+    'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800',
+    'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=800',
+    'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80&w=800',
+  ];
+
   return (
     <section className="py-24 bg-[#f8f9fa]">
       <div className="max-w-7xl mx-auto px-4">
@@ -1037,17 +1048,9 @@ const Trust = ({ lang }: { lang: Language }) => {
         </h2>
         <div className="grid md:grid-cols-3 gap-6 mb-16">
           {features.map((f, idx) => (
-            <motion.div
-              key={idx}
-              initial={{ opacity: 0, y: 20 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ delay: idx * 0.1 }}
-              className="flex flex-col gap-4 p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all"
-            >
-              <div className="w-11 h-11 bg-[#1a1a1a] text-white flex items-center justify-center rounded-2xl">
-                {f.icon}
-              </div>
+            <motion.div key={idx} initial={{ opacity: 0, y: 20 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} transition={{ delay: idx * 0.1 }}
+              className="flex flex-col gap-4 p-8 bg-white rounded-3xl border border-gray-100 shadow-sm hover:shadow-md transition-all">
+              <div className="w-11 h-11 bg-[#1a1a1a] text-white flex items-center justify-center rounded-2xl">{f.icon}</div>
               <div>
                 <h3 className="text-lg font-bold text-[#1a1a1a] mb-2">{f.title}</h3>
                 <p className="text-gray-500 text-sm leading-relaxed">{f.desc}</p>
@@ -1055,23 +1058,12 @@ const Trust = ({ lang }: { lang: Language }) => {
             </motion.div>
           ))}
         </div>
-
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-          {[
-            'https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600210492486-724fe5c67fb0?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600585154526-990dcea4db0d?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600573472591-ee6b68d14c68?auto=format&fit=crop&q=80&w=800',
-            'https://images.unsplash.com/photo-1600047509807-ba8f99d2cdde?auto=format&fit=crop&q=80&w=800',
-          ].map((url, i) => (
+          {projectImages.map((url, i) => (
             <div key={i} className="aspect-[4/5] overflow-hidden group relative rounded-2xl">
-              <img
-                src={url}
-                alt={`${t('project_label')} ${i + 1}`}
+              <img src={url} alt={`${t('project_label')} ${i + 1}`}
                 className="w-full h-full object-cover grayscale group-hover:grayscale-0 transition-all duration-700"
-                referrerPolicy="no-referrer"
-              />
+                referrerPolicy="no-referrer" />
               <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-5 rounded-2xl">
                 <p className="text-white font-bold text-xs uppercase tracking-widest">{t('project_label')} #{i + 1}</p>
               </div>
@@ -1085,7 +1077,6 @@ const Trust = ({ lang }: { lang: Language }) => {
 
 const AboutUs = ({ lang }: { lang: Language }) => {
   const t = useT(lang);
-
   return (
     <section className="py-24 bg-white overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 grid md:grid-cols-2 gap-16 items-center">
@@ -1098,7 +1089,7 @@ const AboutUs = ({ lang }: { lang: Language }) => {
           />
           <div className="absolute bottom-6 left-6 right-6 bg-white/90 backdrop-blur-xl p-5 rounded-2xl">
             <p className="text-lg font-bold text-[#1a1a1a]">Arsen Ametov</p>
-            <p className="text-xs text-gray-400 font-medium mt-0.5">Gründer · Saar-Bau Team</p>
+            <p className="text-xs text-gray-400 font-medium mt-0.5">Gründer · Bauwerk_Saar</p>
           </div>
         </div>
         <div>
@@ -1137,19 +1128,12 @@ const FAQ = ({ lang }: { lang: Language }) => {
   return (
     <section className="py-24 bg-[#f8f9fa]">
       <div className="max-w-3xl mx-auto px-4">
-        <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-12 text-center tracking-tighter">
-          {t('faq_title')}
-        </h2>
+        <h2 className="text-3xl md:text-4xl font-bold text-[#1a1a1a] mb-12 text-center tracking-tighter">{t('faq_title')}</h2>
         <div className="space-y-3">
           {faqs.map((faq, idx) => (
-            <motion.div
-              key={idx}
-              className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden"
-            >
-              <button
-                onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
-                className="w-full px-6 py-5 flex items-center justify-between text-left"
-              >
+            <motion.div key={idx} className="bg-white rounded-2xl border border-gray-100 shadow-sm overflow-hidden">
+              <button onClick={() => setOpenIdx(openIdx === idx ? null : idx)}
+                className="w-full px-6 py-5 flex items-center justify-between text-left">
                 <div className="flex gap-3 items-center">
                   <HelpCircle className="text-[#1a1a1a] flex-shrink-0 w-5 h-5" />
                   <span className="text-base font-semibold text-[#1a1a1a]">{faq.q}</span>
@@ -1158,13 +1142,7 @@ const FAQ = ({ lang }: { lang: Language }) => {
               </button>
               <AnimatePresence>
                 {openIdx === idx && (
-                  <motion.div
-                    initial={{ height: 0, opacity: 0 }}
-                    animate={{ height: 'auto', opacity: 1 }}
-                    exit={{ height: 0, opacity: 0 }}
-                    transition={{ duration: 0.2 }}
-                    className="overflow-hidden"
-                  >
+                  <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: 'auto', opacity: 1 }} exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.2 }} className="overflow-hidden">
                     <p className="px-6 pb-5 text-sm text-gray-500 leading-relaxed pl-14">{faq.a}</p>
                   </motion.div>
                 )}
@@ -1177,17 +1155,8 @@ const FAQ = ({ lang }: { lang: Language }) => {
   );
 };
 
-const Footer = ({
-  onShowImpressum,
-  onShowPrivacy,
-  lang,
-}: {
-  onShowImpressum: () => void;
-  onShowPrivacy: () => void;
-  lang: Language;
-}) => {
+const Footer = ({ onShowImpressum, onShowPrivacy, lang }: { onShowImpressum: () => void; onShowPrivacy: () => void; lang: Language }) => {
   const t = useT(lang);
-
   return (
     <footer className="bg-[#0a0a0a] text-white py-20">
       <div className="max-w-7xl mx-auto px-4">
@@ -1197,7 +1166,7 @@ const Footer = ({
               <div className="w-9 h-9 bg-white rounded-xl flex items-center justify-center">
                 <HardHat className="text-[#0a0a0a] w-5 h-5" />
               </div>
-              <span className="text-xl font-bold tracking-tight">Saar-Bau Team</span>
+              <span className="text-xl font-bold tracking-tight">Bauwerk_Saar</span>
             </div>
             <p className="text-gray-500 max-w-sm leading-relaxed text-sm">{t('footer_sub')}</p>
             <div className="flex gap-4 mt-6">
@@ -1211,15 +1180,13 @@ const Footer = ({
               </a>
             </div>
           </div>
-
           <div>
             <h4 className="font-bold mb-6 text-xs uppercase tracking-[0.2em] text-gray-400">{t('footer_contact')}</h4>
             <ul className="space-y-3 text-gray-500 text-sm">
               <li>Saarland, Deutschland</li>
-              <li>info@saar-bau-team.de</li>
+              <li>info@bauwerk-saar.de</li>
             </ul>
           </div>
-
           <div>
             <h4 className="font-bold mb-6 text-xs uppercase tracking-[0.2em] text-gray-400">{t('footer_legal')}</h4>
             <ul className="space-y-3 text-gray-500 text-sm">
@@ -1228,7 +1195,6 @@ const Footer = ({
             </ul>
           </div>
         </div>
-
         <div className="pt-10 border-t border-white/5 flex flex-col md:flex-row justify-between items-center gap-6 text-xs text-gray-600 font-medium">
           <p>{t('footer_rights')}</p>
           <a href="#" className="hover:text-white transition-colors flex items-center gap-2">
@@ -1240,46 +1206,28 @@ const Footer = ({
   );
 };
 
-const LegalModal = ({
-  title,
-  content,
-  onClose,
-}: {
-  title: string;
-  content: React.ReactNode;
-  onClose: () => void;
-}) => {
-  return (
-    <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      exit={{ opacity: 0 }}
-      className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4"
-    >
-      <motion.div
-        initial={{ y: 30, opacity: 0, scale: 0.97 }}
-        animate={{ y: 0, opacity: 1, scale: 1 }}
-        exit={{ y: 30, opacity: 0, scale: 0.97 }}
-        transition={{ duration: 0.2 }}
-        className="bg-white w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-col shadow-2xl rounded-3xl"
-      >
-        <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/80">
-          <h2 className="text-lg font-bold text-[#1a1a1a]">{title}</h2>
-          <button onClick={onClose} className="w-9 h-9 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all">
-            <X size={18} className="text-gray-500" />
-          </button>
-        </div>
-        <div className="p-8 overflow-y-auto text-gray-600 leading-relaxed text-sm">{content}</div>
-      </motion.div>
+const LegalModal = ({ title, content, onClose }: { title: string; content: React.ReactNode; onClose: () => void }) => (
+  <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
+    className="fixed inset-0 bg-black/50 backdrop-blur-sm z-[100] flex items-center justify-center p-4">
+    <motion.div initial={{ y: 30, opacity: 0, scale: 0.97 }} animate={{ y: 0, opacity: 1, scale: 1 }}
+      exit={{ y: 30, opacity: 0, scale: 0.97 }} transition={{ duration: 0.2 }}
+      className="bg-white w-full max-w-4xl max-h-[80vh] overflow-hidden flex flex-col shadow-2xl rounded-3xl">
+      <div className="p-6 border-b border-gray-100 flex justify-between items-center bg-gray-50/80">
+        <h2 className="text-lg font-bold text-[#1a1a1a]">{title}</h2>
+        <button onClick={onClose} className="w-9 h-9 rounded-xl bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-all">
+          <X size={18} className="text-gray-500" />
+        </button>
+      </div>
+      <div className="p-8 overflow-y-auto text-gray-600 leading-relaxed text-sm">{content}</div>
     </motion.div>
-  );
-};
+  </motion.div>
+);
 
 const ImpressumContent = () => (
   <div className="space-y-6 text-left">
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Angaben gemäß § 5 TMG</h3>
-      <p>Saar-Bau Team<br />Musterstraße 123<br />66111 Saarbrücken</p>
+      <p>Bauwerk_Saar<br />Musterstraße 123<br />66111 Saarbrücken</p>
     </section>
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Vertreten durch</h3>
@@ -1287,7 +1235,7 @@ const ImpressumContent = () => (
     </section>
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Kontakt</h3>
-      <p>E-Mail: info@saar-bau-team.de</p>
+      <p>E-Mail: info@bauwerk-saar.de</p>
     </section>
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Umsatzsteuer-ID</h3>
@@ -1305,7 +1253,7 @@ const PrivacyContent = () => (
     <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">1. Datenschutz auf einen Blick</h3>
     <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen.</p>
     <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">2. Datenerfassung auf unserer Website</h3>
-    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber. Dessen Kontaktdaten können Sie dem Impressum dieser Website entnehmen.</p>
+    <p>Die Datenverarbeitung auf dieser Website erfolgt durch den Websitebetreiber.</p>
     <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">3. Analyse-Tools und Tools von Drittanbietern</h3>
     <p>Beim Besuch dieser Website kann Ihr Surf-Verhalten statistisch ausgewertet werden.</p>
     <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">4. Ihre Rechte</h3>
@@ -1315,25 +1263,17 @@ const PrivacyContent = () => (
 
 const ThankYou = ({ lang }: { lang: Language }) => {
   const t = useT(lang);
-
   return (
     <div className="min-h-screen bg-[#f8f9fa] flex items-center justify-center p-4">
-      <motion.div
-        initial={{ opacity: 0, scale: 0.9 }}
-        animate={{ opacity: 1, scale: 1 }}
-        className="max-w-xl w-full text-center bg-white rounded-3xl p-12 shadow-2xl"
-      >
+      <motion.div initial={{ opacity: 0, scale: 0.9 }} animate={{ opacity: 1, scale: 1 }}
+        className="max-w-xl w-full text-center bg-white rounded-3xl p-12 shadow-2xl">
         <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-8">
           <CheckCircle2 size={44} />
         </div>
         <h1 className="text-3xl font-bold text-[#1a1a1a] mb-5 tracking-tight">{t('thanks_title')}</h1>
         <p className="text-gray-500 mb-10 leading-relaxed">{t('thanks_sub')}</p>
-        <a
-          href="https://instagram.com"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all active:scale-95"
-        >
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer"
+          className="inline-flex items-center gap-3 px-8 py-4 bg-gradient-to-r from-purple-600 to-pink-600 text-white font-bold rounded-2xl shadow-xl hover:shadow-2xl transition-all active:scale-95">
           <Instagram size={22} />
           <span>{t('thanks_ig')}</span>
         </a>
@@ -1357,14 +1297,11 @@ export default function App() {
     window.scrollTo(0, 0);
   };
 
-  if (isSubmitted) {
-    return <ThankYou lang={lang} />;
-  }
+  if (isSubmitted) return <ThankYou lang={lang} />;
 
   return (
     <div className="min-h-screen bg-white font-sans text-gray-900 selection:bg-[#1a1a1a] selection:text-white">
       <Header onStartQuiz={() => setShowQuiz(true)} currentLang={lang} onLangChange={setLang} />
-
       <main>
         <Hero onStartQuiz={() => setShowQuiz(true)} lang={lang} />
         <HowItWorks lang={lang} />
@@ -1372,25 +1309,12 @@ export default function App() {
         <Trust lang={lang} />
         <FAQ lang={lang} />
       </main>
-
-      <Footer
-        onShowImpressum={() => setShowImpressum(true)}
-        onShowPrivacy={() => setShowPrivacy(true)}
-        lang={lang}
-      />
-
+      <Footer onShowImpressum={() => setShowImpressum(true)} onShowPrivacy={() => setShowPrivacy(true)} lang={lang} />
       <AnimatePresence>
-        {showQuiz && (
-          <Quiz onCancel={() => setShowQuiz(false)} onComplete={handleQuizComplete} lang={lang} />
-        )}
-        {showImpressum && (
-          <LegalModal title="Impressum" content={<ImpressumContent />} onClose={() => setShowImpressum(false)} />
-        )}
-        {showPrivacy && (
-          <LegalModal title="Datenschutzerklärung" content={<PrivacyContent />} onClose={() => setShowPrivacy(false)} />
-        )}
+        {showQuiz && <Quiz onCancel={() => setShowQuiz(false)} onComplete={handleQuizComplete} lang={lang} />}
+        {showImpressum && <LegalModal title="Impressum" content={<ImpressumContent />} onClose={() => setShowImpressum(false)} />}
+        {showPrivacy && <LegalModal title="Datenschutzerklärung" content={<PrivacyContent />} onClose={() => setShowPrivacy(false)} />}
       </AnimatePresence>
-
       <CookieBanner lang={lang} />
     </div>
   );
