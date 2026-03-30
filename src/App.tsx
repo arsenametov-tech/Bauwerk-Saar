@@ -1358,8 +1358,64 @@ export default function App() {
   const [showImpressum, setShowImpressum] = useState(false);
   const [showPrivacy, setShowPrivacy] = useState(false);
 
-  const handleQuizComplete = (data: QuizData) => {
-    console.log('Quiz Data:', data);
+  const handleQuizComplete = async (data: QuizData) => {
+    const BOT_TOKEN = import.meta.env.VITE_TELEGRAM_BOT_TOKEN;
+    const CHAT_ID = import.meta.env.VITE_TELEGRAM_CHAT_ID;
+    const FORMSPREE_URL = import.meta.env.VITE_FORMSPREE_URL;
+
+    const styleLabels: Record<string, string> = {
+      modern: 'Modern / Minimalistisch',
+      scandinavian: 'Skandinavisch',
+      classic: 'Klassisch',
+      industrial: 'Industrial',
+      mediterranean: 'Mediterran',
+    };
+    const typeLabels: Record<string, string> = {
+      bathroom: 'Bad / WC',
+      kitchen: 'Küche',
+      living: 'Wohnzimmer',
+      bedroom: 'Schlafzimmer',
+      full: 'Komplettsanierung',
+    };
+
+    const message = [
+      '🏗 *Neue Anfrage — Bauwerk_Saar*',
+      '',
+      `👤 *Name:* ${data.name}`,
+      `📧 *E-Mail:* ${data.email}`,
+      `📱 *WhatsApp:* ${data.whatsapp || '—'}`,
+      `🛠 *Bereich:* ${typeLabels[data.type] || data.type}`,
+      `📐 *Fläche:* ${data.area} m²`,
+      `🎨 *Stil:* ${styleLabels[data.style] || data.style}`,
+      `📅 *Datum:* ${new Date().toLocaleString('de-DE')}`,
+    ].join('\n');
+
+    const telegramPromise = fetch(
+      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+      {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'Markdown' }),
+      }
+    ).catch(() => null);
+
+    const formData = new FormData();
+    formData.append('name', data.name);
+    formData.append('email', data.email);
+    formData.append('whatsapp', data.whatsapp || '—');
+    formData.append('type', typeLabels[data.type] || data.type);
+    formData.append('area', `${data.area} m²`);
+    formData.append('style', styleLabels[data.style] || data.style);
+    if (data.photo) formData.append('photo', data.photo);
+
+    const formspreePromise = fetch(FORMSPREE_URL, {
+      method: 'POST',
+      body: formData,
+      headers: { Accept: 'application/json' },
+    }).catch(() => null);
+
+    Promise.all([telegramPromise, formspreePromise]);
+
     setShowQuiz(false);
     setIsSubmitted(true);
     window.scrollTo(0, 0);

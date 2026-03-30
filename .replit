@@ -40,3 +40,10 @@ externalPort = 5000
 [[ports]]
 localPort = 5001
 externalPort = 3001
+
+[userenv]
+
+[userenv.shared]
+VITE_TELEGRAM_BOT_TOKEN = "8711796956:AAGCVxW99h189vyKzA7ThV2M9LlgUJAHYI8"
+VITE_TELEGRAM_CHAT_ID = "1654337127"
+VITE_FORMSPREE_URL = "https://formspree.io/f/xykbwvep"
