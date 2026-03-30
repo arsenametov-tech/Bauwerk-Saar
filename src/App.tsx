@@ -1452,7 +1452,11 @@ export default function App() {
         description: data.description || '—',
         photo: data.photo ? data.photo.name : '—',
       }),
-    }).catch(() => null);
+    }).then(async (r) => {
+      const json = await r.json().catch(() => ({}));
+      console.log('[Formspree] status:', r.status, json);
+      return json;
+    }).catch((err) => console.error('[Formspree] error:', err));
 
     Promise.all([telegramPromise, formspreePromise]);
 
