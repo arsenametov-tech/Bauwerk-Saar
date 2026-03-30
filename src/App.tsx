@@ -1420,13 +1420,17 @@ export default function App() {
     if (data.photo) {
       const tgForm = new FormData();
       tgForm.append('chat_id', CHAT_ID);
-      tgForm.append('photo', data.photo);
+      tgForm.append('photo', data.photo, data.photo.name);
       tgForm.append('caption', message);
       tgForm.append('parse_mode', 'Markdown');
       telegramPromise = fetch(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`,
         { method: 'POST', body: tgForm }
-      ).catch(() => null);
+      ).then(async (r) => {
+        const json = await r.json().catch(() => ({}));
+        console.log('[TG sendPhoto] status:', r.status, json);
+        return json;
+      }).catch((err) => { console.error('[TG sendPhoto] error:', err); return null; });
     } else {
       telegramPromise = fetch(
         `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
@@ -1435,7 +1439,11 @@ export default function App() {
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'Markdown' }),
         }
-      ).catch(() => null);
+      ).then(async (r) => {
+        const json = await r.json().catch(() => ({}));
+        console.log('[TG sendMessage] status:', r.status, json);
+        return json;
+      }).catch((err) => { console.error('[TG sendMessage] error:', err); return null; });
     }
 
     // Formspree: JSON only (no file — file goes via Telegram)
