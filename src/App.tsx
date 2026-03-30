@@ -1415,29 +1415,43 @@ export default function App() {
       `📅 *Datum:* ${new Date().toLocaleString('de-DE')}`,
     ].join('\n');
 
-    const telegramPromise = fetch(
-      `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
-      {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'Markdown' }),
-      }
-    ).catch(() => null);
+    // Telegram: sendPhoto if photo attached, otherwise sendMessage
+    let telegramPromise: Promise<unknown>;
+    if (data.photo) {
+      const tgForm = new FormData();
+      tgForm.append('chat_id', CHAT_ID);
+      tgForm.append('photo', data.photo);
+      tgForm.append('caption', message);
+      tgForm.append('parse_mode', 'Markdown');
+      telegramPromise = fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendPhoto`,
+        { method: 'POST', body: tgForm }
+      ).catch(() => null);
+    } else {
+      telegramPromise = fetch(
+        `https://api.telegram.org/bot${BOT_TOKEN}/sendMessage`,
+        {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ chat_id: CHAT_ID, text: message, parse_mode: 'Markdown' }),
+        }
+      ).catch(() => null);
+    }
 
-    const formData = new FormData();
-    formData.append('name', data.name);
-    formData.append('email', data.email);
-    formData.append('whatsapp', data.whatsapp || '—');
-    formData.append('type', typeLabels[data.type] || data.type);
-    formData.append('area', `${data.area} m²`);
-    formData.append('style', styleLabels[data.style] || data.style);
-    if (data.description) formData.append('description', data.description);
-    if (data.photo) formData.append('photo', data.photo);
-
+    // Formspree: JSON only (no file — file goes via Telegram)
     const formspreePromise = fetch(FORMSPREE_URL, {
       method: 'POST',
-      body: formData,
-      headers: { Accept: 'application/json' },
+      headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
+      body: JSON.stringify({
+        name: data.name,
+        email: data.email,
+        whatsapp: data.whatsapp || '—',
+        type: typeLabels[data.type] || data.type,
+        area: `${data.area} m²`,
+        style: styleLabels[data.style] || data.style,
+        description: data.description || '—',
+        photo: data.photo ? data.photo.name : '—',
+      }),
     }).catch(() => null);
 
     Promise.all([telegramPromise, formspreePromise]);
