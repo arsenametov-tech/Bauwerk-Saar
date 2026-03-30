@@ -609,7 +609,7 @@ const Header = ({
                 className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-green-50 flex items-center justify-center text-gray-400 hover:text-[#25D366] transition-all">
                 <MessageCircle size={18} />
               </a>
-              <a href="https://t.me/saarbauteam" target="_blank" rel="noopener noreferrer"
+              <a href="https://t.me/ArsenKirimli" target="_blank" rel="noopener noreferrer"
                 className="w-9 h-9 rounded-xl bg-gray-50 hover:bg-blue-50 flex items-center justify-center text-gray-400 hover:text-[#0088cc] transition-all">
                 <Send size={18} />
               </a>
@@ -711,7 +711,7 @@ const Header = ({
                   className="flex items-center gap-2 px-4 py-2.5 bg-green-50 text-green-700 font-semibold rounded-xl text-sm transition-all">
                   <MessageCircle size={16} /> WhatsApp
                 </a>
-                <a href="https://t.me/saarbauteam" target="_blank" rel="noopener noreferrer"
+                <a href="https://t.me/ArsenKirimli" target="_blank" rel="noopener noreferrer"
                   className="flex items-center gap-2 px-4 py-2.5 bg-blue-50 text-blue-700 font-semibold rounded-xl text-sm transition-all">
                   <Send size={16} /> Telegram
                 </a>
@@ -781,13 +781,13 @@ const Hero = ({ onStartQuiz, lang }: { onStartQuiz: () => void; lang: Language }
               <motion.span
                 animate={{ scale: [1, 1.12, 1], opacity: [0, 0.18, 0] }}
                 transition={{ repeat: Infinity, duration: 2.8, ease: 'easeInOut', repeatDelay: 0.4 }}
-                className="absolute inset-0 rounded-2xl bg-[#1a1a1a] pointer-events-none"
+                className="absolute inset-0 rounded-2xl bg-[#2563eb] pointer-events-none"
               />
               <motion.button
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
                 onClick={onStartQuiz}
-                className="relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-[#1a1a1a] text-white text-sm font-bold rounded-2xl hover:bg-black transition-colors flex items-center justify-center gap-3 shadow-xl z-10"
+                className="relative w-full sm:w-auto px-8 sm:px-10 py-4 sm:py-5 bg-[#2563eb] text-white text-sm font-bold rounded-2xl hover:bg-[#1d4ed8] transition-colors flex items-center justify-center gap-3 shadow-xl z-10"
               >
                 {t('hero_cta')}
                 <ArrowRight size={16} />
@@ -1242,7 +1242,7 @@ const Footer = ({ onShowImpressum, onShowPrivacy, lang }: { onShowImpressum: () 
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-[#25D366]/20 flex items-center justify-center text-gray-500 hover:text-[#25D366] transition-all">
                 <MessageCircle size={20} />
               </a>
-              <a href="https://t.me/saarbauteam" target="_blank" rel="noopener noreferrer"
+              <a href="https://t.me/ArsenKirimli" target="_blank" rel="noopener noreferrer"
                 className="w-10 h-10 rounded-xl bg-white/5 hover:bg-[#0088cc]/20 flex items-center justify-center text-gray-500 hover:text-[#0088cc] transition-all">
                 <Send size={20} />
               </a>
@@ -1252,7 +1252,7 @@ const Footer = ({ onShowImpressum, onShowPrivacy, lang }: { onShowImpressum: () 
             <h4 className="font-bold mb-6 text-xs uppercase tracking-[0.2em] text-gray-400">{t('footer_contact')}</h4>
             <ul className="space-y-3 text-gray-500 text-sm">
               <li>Saarland, Deutschland</li>
-              <li>info@bauwerk-saar.de</li>
+              <li>bauwerksaarland@gmail.com</li>
             </ul>
           </div>
           <div>
@@ -1303,7 +1303,7 @@ const ImpressumContent = () => (
     </section>
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Kontakt</h3>
-      <p>E-Mail: info@bauwerk-saar.de</p>
+      <p>E-Mail: bauwerksaarland@gmail.com</p>
     </section>
     <section>
       <h3 className="font-bold text-[#1a1a1a] mb-2 uppercase tracking-wider text-xs">Umsatzsteuer-ID</h3>
