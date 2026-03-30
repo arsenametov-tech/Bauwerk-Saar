@@ -926,7 +926,7 @@ const Quiz = ({
     { id: 'Modern', label: t('quiz_s3_modern'), img: 'https://images.unsplash.com/photo-1484154218962-a197022b5858?auto=format&fit=crop&q=80&w=400' },
     { id: 'Klassisch', label: t('quiz_s3_klassisch'), img: 'https://images.unsplash.com/photo-1513694203232-719a280e022f?auto=format&fit=crop&q=80&w=400' },
     { id: 'Skandinavisch', label: t('quiz_s3_skandi'), img: 'https://images.unsplash.com/photo-1554995207-c18c203602cb?auto=format&fit=crop&q=80&w=400' },
-    { id: 'Loft', label: t('quiz_s3_loft'), img: 'https://images.unsplash.com/photo-1505691938895-1758d7eaa511?auto=format&fit=crop&q=80&w=400' },
+    { id: 'Loft', label: t('quiz_s3_loft'), img: 'https://images.unsplash.com/photo-1536376072261-38c75010e6c9?auto=format&fit=crop&q=80&w=400' },
   ];
 
   return (
